@@ -1,40 +1,45 @@
 " ============================================================
 " framer
-" 
-" URL: 
-" Author: 
+"
+" URL:
+" Author:
 " License: MIT
-" Last Change: 2020/03/11 21:37
+" Last Change: 2020/04/12 03:38
 " ============================================================
 
-let s:p = {"normal": {}, "inactive": {}, "insert": {}, "replace": {}, "visual": {}, "tabline": {} }
+let s:p = {"normal": {}, "inactive": {}, "insert": {}, "replace": {}, "visual": {}, "tabline": {}}
 
-let s:p.normal.left = [[["#00BBFF", 39], ["#181818", 234]], [["#656565", 242], ["#181818", 234]]]
-let s:p.normal.middle = [[["#00BBFF", 39], ["#181818", 234]]]
-let s:p.normal.right = [[["#00BBFF", 39], ["#181818", 234]], [["#00BBFF", 39], ["#181818", 234]]]
-let s:p.normal.error = [[["#EEEEEE", 255], ["#181818", 234]]]
-let s:p.normal.warning = [[["#EEEEEE", 255], ["#181818", 234]]]
+let s:p.normal.left     = [[["#00BBFF",  39], ["#181818", 234]], [["#656565", 242], ["#181818", 234]]]
+let s:p.normal.middle   = [[["#00BBFF",  39], ["#181818", 234]]]
+let s:p.normal.right    = [[["#181818", 234], ["#00BBFF",  39]], [["#181818", 234], ["#00BBFF",  39]]]
+let s:p.normal.error    = [[["#EEEEEE", 255], ["#181818", 234]]]
+let s:p.normal.warning  = [[["#EEEEEE", 255], ["#181818", 234]]]
 
-let s:p.inactive.left = [[["#656565", 242], ["#181818", 234]], [["#656565", 242], ["#181818", 234]]]
+let s:p.inactive.left   = [[["#656565", 242], ["#181818", 234]], [["#656565", 242], ["#181818", 234]]]
 let s:p.inactive.middle = [[["#656565", 242], ["#181818", 234]]]
-let s:p.inactive.right = [[["#656565", 242], ["#181818", 234]], [["#656565", 242], ["#181818", 234]]]
+let s:p.inactive.right  = [[["#656565", 242], ["#181818", 234]], [["#656565", 242], ["#181818", 234]]]
 
-let s:p.insert.left = [[["#FB5599", 204], ["#181818", 234]], [["#EEEEEE", 255], ["#181818", 234]]]
-let s:p.insert.middle = [[["#FB5599", 204], ["#181818", 234]]]
-let s:p.insert.right = [[["#FB5599", 204], ["#181818", 234]], [["#FB5599", 204], ["#181818", 234]]]
+let s:p.insert.left     = [[["#FB5599", 204], ["#181818", 234]], [["#EEEEEE", 255], ["#181818", 234]]]
+let s:p.insert.middle   = [[["#FB5599", 204], ["#181818", 234]]]
+let s:p.insert.right    = [[["#181818", 234], ["#FB5599", 204]], [["#181818", 234], ["#FB5599", 204]]]
 
-let s:p.replace.left = [[["#EEEEEE", 255], ["#181818", 234]], [["#EEEEEE", 255], ["#181818", 234]]]
-let s:p.replace.middle = [[["#EEEEEE", 255], ["#181818", 234]]]
-let s:p.replace.right = [[["#EEEEEE", 255], ["#181818", 234]], [["#EEEEEE", 255], ["#181818", 234]]]
+let s:p.replace.left    = [[["#EEEEEE", 255], ["#181818", 234]], [["#EEEEEE", 255], ["#181818", 234]]]
+let s:p.replace.middle  = [[["#EEEEEE", 255], ["#181818", 234]]]
+let s:p.replace.right   = [[["#181818", 234], ["#EEEEEE", 255]], [["#181818", 234], ["#EEEEEE", 255]]]
 
-let s:p.visual.left = [[["#FF8867", 209], ["#181818", 234]], [["#EEEEEE", 255], ["#181818", 234]]]
-let s:p.visual.middle = [[["#FF8867", 209], ["#181818", 234]]]
-let s:p.visual.right = [[["#FF8867", 209], ["#181818", 234]], [["#FF8867", 209], ["#181818", 234]]]
+let s:p.visual.left     = [[["#FF8867", 209], ["#181818", 234]], [["#EEEEEE", 255], ["#181818", 234]]]
+let s:p.visual.middle   = [[["#FF8867", 209], ["#181818", 234]]]
+let s:p.visual.right    = [[["#181818", 234], ["#FF8867", 209]], [["#181818", 234], ["#FF8867", 209]]]
 
-let s:p.tabline.left = [[["#EEEEEE", 255], ["#181818", 234]]]
-let s:p.tabline.tabsel = [[["#EEEEEE", 255], ["#181818", 234]]]
-let s:p.tabline.middle = [[["#EEEEEE", 255], ["#181818", 234]]]
-let s:p.tabline.right = [[["#EEEEEE", 255], ["#181818", 234]]]
+" WA for nvim - set the bg of tabline.left[0] to #00BBFE
+let s:p.tabline.left    = [
+    \ [["#181818", 234], ["#00BBFE",  39]],
+    \ [["#FFCC66", 178], ["#181818", 234]],
+    \ [["#181818", 234], ["#22CCDD",  51]]
+    \ ]
+let s:p.tabline.tabsel  = [[["#EEEEEE", 255], ["#181818", 234]]]
+let s:p.tabline.middle  = [[["#EEEEEE", 255], ["#181818", 234]]]
+let s:p.tabline.right   = [[["#656565", 242], ["#181818", 234]]]
 
 let g:lightline#colorscheme#framer#palette = lightline#colorscheme#flatten(s:p)
 
