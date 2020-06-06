@@ -39,7 +39,7 @@ let s:p.tabline.left    = [
     \ ]
 let s:p.tabline.tabsel  = [[["#EEEEEE", 255], ["#181818", 234]]]
 let s:p.tabline.middle  = [[["#EEEEEE", 255], ["#181818", 234]]]
-let s:p.tabline.right   = [[["#656565", 242], ["#181818", 234]]]
+let s:p.tabline.right   = [[["#00BBFF", 39], ["#181818", 234]]]
 
 let g:lightline#colorscheme#framer#palette = lightline#colorscheme#flatten(s:p)
 
